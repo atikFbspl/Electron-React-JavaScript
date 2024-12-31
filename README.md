@@ -1,70 +1,92 @@
-Electron + React + JavaScript Boilerplate
-A simple and lightweight boilerplate for building desktop applications using Electron, React, and JavaScript. This setup allows you to quickly prototype and develop cross-platform desktop apps with modern web technologies.
+# Electron-React-JavaScript
 
-Features
-Electron: Enables you to build cross-platform desktop apps with a single codebase.
-React: A modern library for building fast and dynamic user interfaces.
-JavaScript: A familiar language for web developers.
-Hot Reloading: Streamlined development with real-time updates.
-Easy Setup: Minimal configuration to get started quickly.
-Prerequisites
-Make sure you have the following installed on your machine:
+A simple and easy to use electron + react + javascript boilerplate.
 
-Node.js (LTS version recommended)
-npm or yarn
-Installation
-Clone the repository:
+## Table of Contents
 
-bash
-Copy code
-git clone https://github.com/your-username/electron-react-javascript-boilerplate.git
-Navigate to the project directory:
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Scripts](#scripts)
+- [Folder Structure](#folder-structure)
+- [License](#license)
 
-bash
-Copy code
-cd electron-react-javascript-boilerplate
-Install the dependencies:
+## Introduction
 
-bash
-Copy code
-npm install
-# or
-yarn install
-Usage
-Start the development server:
+This project is a [React](https://reactjs.org/) and [Electron](https://www.electronjs.org/) based application built using JavaScript. It combines the power of React for the frontend and Electron for building cross-platform desktop applications.
 
-bash
-Copy code
-npm start
-# or
-yarn start
-Build the project for production:
+## Features
 
-bash
-Copy code
+- Cross-platform compatibility (Windows, macOS, Linux)
+- Fast development with React
+- Simple and customizable Electron integration
+- Modular and scalable codebase
+
+## Installation
+
+To get started with this project, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/atikFbspl/Electron-React-JavaScript.git
+   cd https://github.com/atikFbspl/Electron-React-JavaScript.git
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+## Usage
+
+To build the React app:
+
+```bash
 npm run build
-# or
-yarn build
-Package the app for distribution:
+```
 
-bash
-Copy code
-npm run package
-# or
-yarn package
-Folder Structure
-plaintext
-Copy code
-├── public/          # Static assets
-├── src/             # React components and application logic
-│   ├── components/  # Reusable UI components
-│   ├── pages/       # Page components
-│   ├── App.js       # Main React App
-│   ├── index.js     # Entry point for React
-├── main.js          # Electron Main Process
-├── package.json     # Project metadata and scripts
-Contributing
-Contributions are welcome! Please open an issue or submit a pull request if you'd like to contribute to this project.
+To start the development server for Electron and launch the Electron app:
 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+```bash
+npm run dev:electron
+```
+
+## Scripts
+
+Here are the main scripts defined in the `package.json`:
+
+- `npm run build`: Builds the React project for displaying in electron app.
+- `npm run dev:electron`: Starts the development environment for Electron.
+
+## Folder Structure
+
+```
+root
+├── dist-react/           # Production build of the React app
+│   ├── assets/           # Static assets for the built app
+│   ├── index.html        # Entry point for the built app
+├── src/                  # Source code
+│   ├── electron/         # Electron main process files
+│   │   └── main.js       # Entry point for the Electron main process
+│   ├── ui/               # React UI components
+│       ├── assets/       # Static assets for React
+│       ├── App.jsx       # Main React component
+│       ├── App.css       # Styles for the main React component
+│       ├── index.css     # Global styles
+│       └── main.jsx      # Entry point for the React app
+├── node_modules/         # Node.js dependencies
+├── .gitignore            # Git ignore rules
+├── eslint.config.js      # ESLint configuration
+├── index.html            # Main HTML template for development
+├── package.json          # Project metadata and scripts
+├── package-lock.json     # Lock file for installed dependencies
+├── README.md             # Project README
+└── vite.config.js        # Vite configuration for the React app
+```
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
